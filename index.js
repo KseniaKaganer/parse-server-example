@@ -10,8 +10,8 @@ var databaseUri = 'mongodb://mda:mda@ds019886.mlab.com:19886/heroku_6txkpfn4';
 var api = new ParseServer({
   databaseURI: databaseUri || 'mongodb://localhost:27017/dev',
   cloud: process.env.CLOUD_CODE_MAIN || __dirname + '/cloud/main.js',
-  appId: process.env.APP_ID || '3OSGw0XJKCxN6ZgsXzEmCn4lCl37TcXG6kQ2peg4',
-  masterKey: process.env.MASTER_KEY || 'rwlYILz2gGncK9spOZFttnuwRO3dMHmX89S9FVTC', //Add your master key here. Keep it secret!
+  appId: process.env.APP_ID || 'Z1eZvNmE3uNCzf5SJDDfjlGownqSgxaAfhYUPUGS',
+  masterKey: process.env.MASTER_KEY || 'ri02apQAMvXZRc7aOptrXfWCoYvUJxxLNDShywJs', //Add your master key here. Keep it secret!
   serverURL: process.env.SERVER_URL || 'http://mda-mig.herokuapp.com',  // Don't forget to change to https if needed
   liveQuery: {
     classNames: ["Posts", "Comments"] // List of classes to support for query subscriptions

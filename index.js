@@ -5,14 +5,14 @@ var express = require('express');
 var ParseServer = require('parse-server').ParseServer;
 var path = require('path');
 
-var databaseUri = 'mongodb://mda:mda@ds019886.mlab.com:19886/heroku_6txkpfn4';
+var databaseUri = 'mongodb://demo:mig@ds041566.mlab.com:41566/heroku_4slm0hxx';
 
 var api = new ParseServer({
   databaseURI: databaseUri || 'mongodb://localhost:27017/dev',
   cloud: process.env.CLOUD_CODE_MAIN || __dirname + '/cloud/main.js',
-  appId: process.env.APP_ID || 'Z1eZvNmE3uNCzf5SJDDfjlGownqSgxaAfhYUPUGS',
-  masterKey: process.env.MASTER_KEY || 'ri02apQAMvXZRc7aOptrXfWCoYvUJxxLNDShywJs', //Add your master key here. Keep it secret!
-  serverURL: process.env.SERVER_URL || 'http://mda-mig.herokuapp.com',  // Don't forget to change to https if needed
+  appId: process.env.APP_ID || 'CzWhRW2VLbUs1X8JkxvquM1dsWVPaYdXb81wgHMz',
+  masterKey: process.env.MASTER_KEY || 'YwYPQjj9kU25YDIMHCaWR881mOdtYBRL80OjWTAt', //Add your master key here. Keep it secret!
+  serverURL: process.env.SERVER_URL || 'http://demomig.herokuapp.com/',  // Don't forget to change to https if needed
   liveQuery: {
     classNames: ["Posts", "Comments"] // List of classes to support for query subscriptions
   }

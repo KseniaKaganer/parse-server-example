@@ -12,7 +12,7 @@ var api = new ParseServer({
   cloud: process.env.CLOUD_CODE_MAIN || __dirname + '/cloud/main.js',
   appId: process.env.APP_ID || 'CzWhRW2VLbUs1X8JkxvquM1dsWVPaYdXb81wgHMz',
   masterKey: process.env.MASTER_KEY || 'YwYPQjj9kU25YDIMHCaWR881mOdtYBRL80OjWTAt', //Add your master key here. Keep it secret!
-  serverURL: process.env.SERVER_URL || 'http://demomig.herokuapp.com/',  // Don't forget to change to https if needed
+  serverURL: process.env.SERVER_URL || 'https://demomig.herokuapp.com/',  // Don't forget to change to https if needed
   liveQuery: {
     classNames: ["Posts", "Comments"] // List of classes to support for query subscriptions
   }

@@ -8,7 +8,7 @@ var path = require('path');
 var databaseUri = 'mongodb://heroku_zlrwm756:jel1de7c8oe64t6i60sh4bdoe4@ds041516.mlab.com:41516/heroku_zlrwm756';
 
 var api = new ParseServer({
-  databaseURI: 'mongodb://heroku_zlrwm756:jel1de7c8oe64t6i60sh4bdoe4@ds041516.mlab.com:41516/heroku_zlrwm756',
+  databaseURI: databaseUri || 'mongodb://localhost:27017/dev',
   cloud: process.env.CLOUD_CODE_MAIN || __dirname + '/cloud/main.js',
   appId: process.env.APP_ID || 'VwaFl3pr1u97eNmX2SFjXa3hgnxXJqtiDaRn5183',
   masterKey: process.env.MASTER_KEY || 'mMGekvMZMJrsNUHjlNJPKmyBvRlIXxdlhRGMhhlu', //Add your master key here. Keep it secret!
@@ -27,7 +27,7 @@ var app = express();
 app.use('/public', express.static(path.join(__dirname, '/public')));
 
 // Serve the Parse API on the /parse URL prefix
-var mountPath = process.env.PARSE_MOUNT || '/parse';
+var mountPath = process.env.PARSE_MOUNT || '/';
 app.use(mountPath, api);
 
 // Parse Server plays nicely with the rest of your web routes

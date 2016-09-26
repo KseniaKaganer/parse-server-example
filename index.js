@@ -8,7 +8,7 @@ var path = require('path');
 var databaseUri = 'mongodb://heroku_zlrwm756:jel1de7c8oe64t6i60sh4bdoe4@ds041516.mlab.com:41516/heroku_zlrwm756';
 
 var api = new ParseServer({
-  databaseURI: databaseUri || 'mongodb://localhost:27017/dev',
+  databaseURI: 'mongodb://heroku_zlrwm756:jel1de7c8oe64t6i60sh4bdoe4@ds041516.mlab.com:41516/heroku_zlrwm756',
   cloud: process.env.CLOUD_CODE_MAIN || __dirname + '/cloud/main.js',
   appId: process.env.APP_ID || 'VwaFl3pr1u97eNmX2SFjXa3hgnxXJqtiDaRn5183',
   masterKey: process.env.MASTER_KEY || 'mMGekvMZMJrsNUHjlNJPKmyBvRlIXxdlhRGMhhlu', //Add your master key here. Keep it secret!

@@ -5,13 +5,13 @@ var express = require('express');
 var ParseServer = require('parse-server').ParseServer;
 var path = require('path');
 
-var databaseUri = 'mongodb://heroku_z0s5wks5:oi6evs8us0rgv0c7mlb42vd8gt@ds033337.mongolab.com:33337/heroku_z0s5wks5';
+var databaseUri = 'mongodb://heroku_zlrwm756:jel1de7c8oe64t6i60sh4bdoe4@ds041516.mlab.com:41516/heroku_zlrwm756';
 
 var api = new ParseServer({
   databaseURI: databaseUri || 'mongodb://localhost:27017/dev',
   cloud: process.env.CLOUD_CODE_MAIN || __dirname + '/cloud/main.js',
-  appId: process.env.APP_ID || 'ECSYxBjuvGLD5xjrkJw1UORKcC7nXlbngxEA8tx3',
-  masterKey: process.env.MASTER_KEY || 'AgpMwo8xaGtythIpBh2SKocJONiQKrOibO4grLSd', //Add your master key here. Keep it secret!
+  appId: process.env.APP_ID || 'VwaFl3pr1u97eNmX2SFjXa3hgnxXJqtiDaRn5183',
+  masterKey: process.env.MASTER_KEY || 'mMGekvMZMJrsNUHjlNJPKmyBvRlIXxdlhRGMhhlu', //Add your master key here. Keep it secret!
   serverURL: process.env.SERVER_URL || 'http://localhost:1337/parse',  // Don't forget to change to https if needed
   liveQuery: {
     classNames: ["Posts", "Comments"] // List of classes to support for query subscriptions
